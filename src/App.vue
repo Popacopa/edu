@@ -25,7 +25,7 @@
             }
         },
         methods: {
-            
+
         }
     }
 </script>
@@ -40,7 +40,7 @@
     }
     .post {
         border-radius: 20px;
-        padding-left: 20px; 
+        padding-left: 20px;
         height: 10vh;
         display: flex;
         flex-direction: column;
@@ -48,11 +48,13 @@
         margin-top: 14px;
         font-family: 'Montserrat', sans-serif;
         background-color: rgba(255, 255, 255, 0.398);
+        transition: all 0.5s;
         .title {
             font-size: large;
         }
         &:hover {
             box-shadow: 1px -1px 25px 0px rgba(64, 83, 97, 0.14);
+            transform: scale(1.1, 1.1);
         }
     }
     .wrapper {
@@ -64,25 +66,28 @@
         flex-direction: column;
         align-items: flex-end;
         input {
+            padding-left: 5px;
             width: 100%;
-            margin-bottom: 10px;
+            margin-bottom: 14px;
             height: 40px;
             border: none;
             border-radius: 10px;
             background-color:  rgba(255, 255, 255, 0.398);
             outline: none;
             font-size: 15px;
+            transition: all 0.5s;
             &:hover {
             box-shadow: 1px -1px 25px 0px rgba(64, 83, 97, 0.14);
-            
-            &:active, &:focus, &:enabled {
+            }
+            &:focus {
                 box-shadow: 1px -1px 25px 0px rgba(64, 83, 97, 0.14);
                 &::placeholder {color: transparent;}
+                transform: scale(1.03, 1.03);
             }
-        }
         }
     }
     body{
+        margin-top: 20px;
         background: linear-gradient(310deg, rgba(0,236,255,1) 0%, rgba(255,226,0,1) 100%);
         //border: 1px solid black;
         min-height: 100vh;
@@ -95,8 +100,10 @@
         background-color: rgba(255, 255, 255, 0.398);
         font-family: 'Montserrat', sans-serif;
         font-size: large;
+        transition: all 0.2s;
         &:hover {
             box-shadow: 1px -1px 25px 0px rgba(64, 83, 97, 0.14);
+            transform: scale(0.9, 0.9);
         }
     }
 </style>
