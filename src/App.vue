@@ -5,7 +5,7 @@
             <input type="text" placeholder="описание">
             <button class="enter">enter</button>
         </form>
-        <div v-for="post in posts" class="post">
+        <div v-for="post in posts" class="post" :key="post.id">
             <div class="title"><strong>{{ post.title }}</strong></div>
             <div class="body">{{ post.body }}</div>
         </div>
@@ -18,7 +18,7 @@
             return {
                 posts: [
                     {id: 1, title: 'заголовок поста', body: 'описание поста'},
-                    {id: 2, title: 'заголовок поста', body: 'описание поста'},
+                    {id: 2, title: 'заголовок ', body: 'описание поста'},
                     {id: 3, title: 'заголовок поста', body: 'описание поста'},
                     {id: 4, title: 'заголовок поста', body: 'описание поста'},
                 ]
