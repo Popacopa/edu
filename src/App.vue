@@ -1,9 +1,9 @@
 <template>
     <div class="wrapper">
-        <form action="">
-            <input type="text" placeholder="название">
-            <input type="text" placeholder="описание">
-            <button class="enter">enter</button>
+        <form action="" @submit.prevent>
+            <input @input="title = $event.target.value" v-bind:value='title' type="text" placeholder="название">
+            <input @input="body = $event.target.value" v-bind:value='body' type="text" placeholder="описание">
+            <button class="enter" @click="createPost">enter</button>
         </form>
         <div v-for="post in posts" class="post" :key="post.id">
             <div class="title"><strong>{{ post.title }}</strong></div>
@@ -16,16 +16,22 @@
     export default {
         data() {
             return {
-                posts: [
-                    {id: 1, title: 'заголовок поста', body: 'описание поста'},
-                    {id: 2, title: 'заголовок ', body: 'описание поста'},
-                    {id: 3, title: 'заголовок поста', body: 'описание поста'},
-                    {id: 4, title: 'заголовок поста', body: 'описание поста'},
-                ]
+                posts: [],
+                title:'',
+                body:'',
             }
         },
         methods: {
-
+            createPost() {
+                const newPost = {
+                    id: Date.now(),
+                    title: this.title,
+                    body: this.body,
+                }
+                this.posts.push(newPost)
+                this.title = ''
+                this.body = ''
+            },
         }
     }
 </script>
