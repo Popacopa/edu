@@ -20,5 +20,7 @@ import postItem from '@/components/postItem.vue'
 </script>
 
 <style lang="scss" scoped>
-    
+    h4 {
+       font-family: 'Montserrat', sans-serif;
+    }
 </style>
