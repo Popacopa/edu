@@ -1,7 +1,7 @@
 <template>
     <button class="enter">
         <slot>
-
+         <!--  слот под слово в родителе -->
         </slot>
     </button>
 </template>
