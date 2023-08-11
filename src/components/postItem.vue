@@ -4,14 +4,16 @@
             <div class="title"><strong>{{ post.title }}</strong></div>
             <div class="body">{{ post.body }}</div>
         </div>
-        <div class="delete">
-            <button>delete</button>
+        <div>
+            <main-button class="delete">delete</main-button>
         </div>
     </div>
 </template>
 
 <script>
+import mainButton from './UI/main-button.vue'
     export default {
+  components: { mainButton },
         props: {
             post: {
                 type: Object,
@@ -39,21 +41,14 @@
             font-size: large;
         }
         &:hover {
-            box-shadow: 1px -1px 25px 0px rgba(64, 83, 97, 0.14);
+            //box-shadow: 1px -1px 25px 0px rgba(64, 83, 97, 0.14);
             transform: scale(1.1, 1.1);
         }
     }
     .delete {
-        button {
-            background-color: rgba(249, 78, 78, 0.85);
-            width: 70px;
-            height: 40px;
-            border: none;
-            border-radius: 14px;
-            color: white;
-            font-family: 'Montserrat', sans-serif;
+        &:hover {
+            background-color: rgba(255, 93, 93, 0.75);
             box-shadow: 1px -1px 25px 0px rgba(64, 83, 97, 0.14);
-            cursor: pointer;
         }
     }
 </style>
