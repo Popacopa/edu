@@ -46,9 +46,11 @@ import mainButton from './UI/main-button.vue'
         }
     }
     .delete {
+        transform: scale(0.9, 0.9);
         &:hover {
             background-color: rgba(255, 93, 93, 0.75);
             box-shadow: 1px -1px 25px 0px rgba(64, 83, 97, 0.14);
+            transform: scale(0.8, 0.8);
         }
     }
 </style>
