@@ -25,7 +25,7 @@
     cursor: pointer;
     &:hover {
             box-shadow: 1px -1px 25px 0px rgba(64, 83, 97, 0.14);
-            transform: scale(0.9, 0.9);
+            transform: scale(0.9, 0.9); 
     }
   }
 </style>
