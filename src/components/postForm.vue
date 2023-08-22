@@ -7,11 +7,7 @@
 </template>
 
 <script>
-    import mainButton from '@/components/UI/main-button.vue'
     export default {
-        components: {
-            mainButton
-        },
         data() {
             return {
                 post: {
