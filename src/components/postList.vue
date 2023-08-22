@@ -1,8 +1,9 @@
 <template>
-    <div class="">
+    <div class="" v-if="posts.length > 0">
         <h4>Список пользователей</h4>
-        <postItem :post="post" v-for="post in posts" :key="post.id"/>
+        <postItem @remove="$emit('remove', post)" :post="post" v-for="post in posts" :key="post.id"/>
     </div>
+    <p v-else>it is so busy now</p>
 </template>
 
 <script>
@@ -20,7 +21,7 @@ import postItem from '@/components/postItem.vue'
 </script>
 
 <style lang="scss" scoped>
-    h4 {
+    h4, p  {
        font-family: 'Montserrat', sans-serif;
     }
 </style>

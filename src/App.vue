@@ -1,7 +1,7 @@
 <template>
     <div class="wrapper">
         <postForm @create="createPost"/>
-        <postList :posts="posts"/>
+        <postList @remove="removePost" :posts="posts"/>
     </div>
 </template>
 
@@ -20,6 +20,9 @@
         methods: {
             createPost(post) {
                 this.posts.push(post)
+            },
+            removePost(post) {
+              this.posts = this.posts.filter(p => p.id !== post.id)
             }
         }
     }
